@@ -13,7 +13,7 @@ export default function Arcticles({articles}: {articles: Cards}){
         <section className="w-full flex items-center flex-col">
             <motion.h2 
             initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
+            animate={{opacity: 1}}
             exit={{opacity: 0}}
             transition={{duration: 2}}
               className="font-medium text-5xl self-end"

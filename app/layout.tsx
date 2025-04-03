@@ -90,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-8 space-y-8`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-8 space-y-8 overflow-x-hidden`}
       >
         {children}
       </body>

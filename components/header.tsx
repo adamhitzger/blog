@@ -10,7 +10,7 @@ import {motion} from "motion/react"
         <header className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div 
              initial={{opacity: 0, x: -500}}
-             whileInView={{opacity: 1, x: 0}}
+             animate={{opacity: 1, x: 0}}
              exit={{opacity: 0, x: -500}}
              transition={{duration: 1}}
             className="flex flex-col items-start justify-center space-y-4">
@@ -22,7 +22,7 @@ import {motion} from "motion/react"
             </motion.div>
             <motion.div
             initial={{opacity: 0, x: 500}}
-            whileInView={{opacity: 1, x: 0}}
+            animate={{opacity: 1, x: 0}}
             exit={{opacity: 0, x: 500}}
             transition={{duration: 1}}
             className="flex flex-col items-center w-full justify-center space-y-4"

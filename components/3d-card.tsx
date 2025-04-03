@@ -52,7 +52,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <motion.div
         initial={{opacity: 0, x: 500}}
-        whileInView={{opacity: 1, x: 0}}
+        animate={{opacity: 1, x: 0}}
         exit={{opacity: 0, x: 500}}
         transition={{duration: duration}}
         className={cn(
