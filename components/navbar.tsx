@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {motion} from "motion/react"
 
 export default function Navbar(){
-    const pathname = usePathname()
     return(
         <motion.nav 
         initial={{opacity: 0}}
