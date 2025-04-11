@@ -11,7 +11,7 @@ export default async function Home() {
     <>
             <Header 
            heading="Adam's blog" 
-           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fuga numquam in quasi velit veniam nesciunt similique cum hic quibusdam quidem quaerat, sit magnam delectus repellendus ut dolorum sed ratione?" 
+           text="Hello 👋 ! I am interested in web development, databases a more. Here on my blog, I write about my experiences a libraries/frameworks that I am intered in."
            img="/me.jpeg" 
            alt="Adam Hitzger - blog about web programming - Next.j, SQL, R3F and more..."
            />
