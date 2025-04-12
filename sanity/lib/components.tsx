@@ -37,7 +37,7 @@ export const components: Partial<PortableTextComponents> = {
           <Image
           width={256}
           height={256}
-            src={urlFor(value)}
+            src={String(urlFor(value))}
             alt={value}
             className="rounded-lg w-96 mx-auto my-5"
           />

@@ -1,3 +1,5 @@
+import * as z from "zod"
+
 export interface Card {
     heading: string;
     slug: string;
@@ -14,6 +16,16 @@ export interface Article {
     description: string;
     keywords: Array<string>;
     content: any;
+}
+
+export interface ActionResponse<T> {
+    success: boolean,
+    submitted: boolean,
+    message: string,
+    inputs?: T,
+    errors?: {
+        [K in keyof T]?: string[]
+    }
 }
 
 export type Cards = Array<Card>

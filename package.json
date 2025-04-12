@@ -18,6 +18,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.79.0",
     "@tabler/icons-react": "^3.31.0",
+    "@types/nodemailer": "^6.4.17",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/three": "^0.174.0",
     "class-variance-authority": "^0.7.1",
@@ -26,14 +27,18 @@
     "motion": "^12.6.2",
     "next": "15.2.3",
     "next-sanity": "^9.9.5",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
+    "react-hot-toast": "^2.5.2",
     "react-syntax-highlighter": "^15.6.1",
     "sanity": "^3.79.0",
     "styled-components": "^6.1.16",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.174.0"
+    "three": "^0.174.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

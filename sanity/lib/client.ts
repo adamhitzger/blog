@@ -1,14 +1,18 @@
-import "server-only"
 import { createClient } from 'next-sanity'
-import { apiVersion, dataset, projectId } from '../env'
+import { apiVersion, dataset, projectId, token } from '../env'
 import type { ClientPerspective, QueryParams } from "next-sanity";
 
 export const client = createClient({
   projectId,
   dataset,
   apiVersion,
+  token,
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
+
+
+
+
 
 export async function sanityFetch<QueryResponse>({
   query,
