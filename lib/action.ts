@@ -6,6 +6,7 @@ import { NewsletterType, newsletter } from "@/lib/utils"
 import { SanityDocument } from "next-sanity";
 import {createTransport} from "nodemailer"
 import { urlFor } from "@/sanity/lib/image";
+import { isSignedUpQuery } from "@/sanity/lib/queries";
 function generateTemplate(data: SanityDocument){
     const { heading,slug,datum, image, description } = data;
     const articleUrl = `https://blog.adamhitzger.com/${slug?.current || ""}`
@@ -145,7 +146,7 @@ export async function saveEmail(prevState: ActionResponse<NewsletterType>, formD
     }
 
     const {success, data, error} = newsletter.safeParse(rawData);
-
+    
     if(!success){
         return{
             submitted: true,
@@ -154,6 +155,16 @@ export async function saveEmail(prevState: ActionResponse<NewsletterType>, formD
             inputs: data,
             errors: error.flatten().fieldErrors
         }
+    }
+    const email = data.email
+    const isSignedUp = await sanityFetch<{_id: string, email:string}>({query: isSignedUpQuery, params: {email}})
+
+    if(isSignedUp._id){
+      return {
+        submitted: true,
+            success: true,
+            message: "You ve alrady signed for newsletter!",
+      }
     }
 
     const newEmail = {

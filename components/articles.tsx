@@ -24,7 +24,7 @@ export default function Arcticles({articles}: {articles: Cards}){
                 </span>
                 Articles
                 </motion.h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3 2xl:grid-cols-4 ">
                 {articles.map((a: Card,i: number) => (
                     <CardContainer duration={i>0 ? i+0.4 :1} className="bg-[#DEDDDD]/50  rounded-3xl group-hover/card:shadow-xl" key={i}>
                     <CardBody className="backdrop-blur-2xl relative group/card   border-black/[0.1] w-auto sm:w-[22rem] h-auto rounded-xl p-6">

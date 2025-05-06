@@ -25,3 +25,8 @@ export const getArticle = groq`*[_type == 'article' && slug.current == $slug][0]
     keywords,
     description,
 }`
+
+export const isSignedUpQuery = groq`*[_type == 'newsletter' && email == $email][0]{
+    _id,
+    email
+}`
